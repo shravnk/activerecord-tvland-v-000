@@ -10,5 +10,6 @@ class Character < ActiveRecord::Base
   def build_show(show)
     new_show = Show.create(show)
     self.show = new_show
+    new_show
   end
 end
