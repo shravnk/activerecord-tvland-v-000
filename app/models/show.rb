@@ -3,6 +3,7 @@ class Show < ActiveRecord::Base
   has_many :artists, through: :characters
 
   def build_network(network)
-    Network.new(network)
+    new_network = Network.create(network)
+    self.network = new_network
   end
 end
