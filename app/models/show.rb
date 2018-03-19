@@ -5,5 +5,6 @@ class Show < ActiveRecord::Base
   def build_network(network)
     new_network = Network.create(network)
     self.network = new_network
+    new_network
   end
 end
